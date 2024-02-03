@@ -51,13 +51,14 @@ def main():
     # Розрахунок відносної похибки, в процентах
     v_error = math.fabs(S-average_area)/S * 100
 
-    #print(f"Математичне обчислення інтеграла: {S}")
-    #print(f"Середнє значення інтеграла за {num_experiments} експериментів: {average_area}, похибка: {round(v_error,3)}%")
+    print(f"Математичне обчислення інтеграла: {S}")
+    print(f"Середнє значення інтеграла за {num_experiments} експериментів: {average_area}, похибка: {round(v_error,3)}%")
 
-    for i in range(0,11):
-        average_area = monte_carlo_simulation(a, b, num_experiments)
-        v_error = math.fabs(S-average_area)/S * 100
-        print(round(v_error,3))
+    # код для аналітики роботи методу
+    #for i in range(0,11):
+    #    average_area = monte_carlo_simulation(a, b, num_experiments)
+    #    v_error = math.fabs(S-average_area)/S * 100
+    #    print(round(v_error,3))
 
 
 if __name__ == '__main__':
