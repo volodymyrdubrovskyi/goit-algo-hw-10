@@ -43,7 +43,7 @@ def main():
 
     # Виконання симуляції методу Монте-Карло
     # Кількість експериментів
-    num_experiments = 200
+    num_experiments = 350
 
     # Виконання симуляції
     average_area = monte_carlo_simulation(a, b, num_experiments)
@@ -51,8 +51,13 @@ def main():
     # Розрахунок відносної похибки, в процентах
     v_error = math.fabs(S-average_area)/S * 100
 
-    print(f"Математичне обчислення інтеграла: {S}")
-    print(f"Середня площа фігури за {num_experiments} експериментів: {average_area}, похибка: {round(v_error,3)}%")
+    #print(f"Математичне обчислення інтеграла: {S}")
+    #print(f"Середнє значення інтеграла за {num_experiments} експериментів: {average_area}, похибка: {round(v_error,3)}%")
+
+    for i in range(0,11):
+        average_area = monte_carlo_simulation(a, b, num_experiments)
+        v_error = math.fabs(S-average_area)/S * 100
+        print(round(v_error,3))
 
 
 if __name__ == '__main__':
